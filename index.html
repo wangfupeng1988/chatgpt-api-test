@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatGPT API Test</title>
+  </head>
+  <body>
+    <p>ChatGPT API Test</p>
+    <div>
+      <p id="answer"></p>
+    </div>
+    <div>
+      <input id="input" value="" placeholder="输入问题" />
+      <button onclick="send()">send</button>
+    </div>
+  </body>
+  <script>
+    const inputElem = document.getElementById('input')
+    const answerElem = document.getElementById('answer')
+
+    function exec(prompt) {
+      const url = new URL('/chat', location.href)
+      url.searchParams.set('prompt', prompt)
+
+      const es = new EventSource(url) // 向服务端发起请求
+      es.onmessage = (event) => {
+        const data = event.data || ''
+        if (data === '[DONE]') {
+          // 结束
+          console.log('done...')
+          es.close()
+          return
+        }
+
+        const obj = JSON.parse(data)
+        // console.log('obj... ', obj)
+
+        const content = obj.choices[0].delta.content
+        if (content == null) {
+          // 可能因为其他原因停止
+          console.log('stop...')
+          es.close()
+          return
+        }
+
+        answerElem.textContent += content
+      }
+    }
+
+    function send() {
+      const prompt = inputElem.value.trim()
+      if (prompt === '') return
+      answerElem.textContent = ''
+      exec(prompt)
+      inputElem.value = ''
+    }
+  </script>
+</html>
