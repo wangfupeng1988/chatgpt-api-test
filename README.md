@@ -1,4 +1,4 @@
-# 2024 ChatGPT API test
+# 2024 Node 调用 ChatGPT API 实现 Stream 流式效果
 
 Nodejs 调用 ChatGPT API ，运行效果如下：
 
@@ -31,6 +31,6 @@ tsnd server.ts
 
 ## 参加我的 Node 全栈 AIGC 项目
 
-我打算用 Next.js + ChatGPT 开发一个 AIGC 知识库（仿 Notion AI 和协同编辑）[划水AI](https://huashuiai.com/) 项目（尚未开发），并真实上线运行。
+我打算用 Next.js + ChatGPT 开发一个 AIGC 知识库（仿 Notion AI 和协同编辑）[划水 AI](https://huashuiai.com/) 项目（尚未开发），并真实上线运行。
 
 项目介绍在[这里](https://juejin.cn/post/7338797433899221043)。有兴趣围观、学习、参与研发的朋友，可直接加我微信 `fe-wfp` （请备注“github 划水”）。
