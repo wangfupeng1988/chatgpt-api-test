@@ -1,10 +1,15 @@
-# 2024 Node 调用 ChatGPT API 实现 Stream 流式效果
+# 2024 Node.js 调用 ChatGPT API 实现 Stream 流式效果
 
-Nodejs 调用 ChatGPT API ，运行效果如下：
+运行效果如下
 
 ![](./bak/chat.gif)
 
 ChatGPT API 文档 https://platform.openai.com/docs/overview
+
+## 背景
+
+- 网上很多资料过时了，不再符合 OpenAI 的开发文档
+- 我要做一个 Node 全栈 AIGC 知识库项目 [划水 AI](https://huashuiai.com/) （仿 notion），项目介绍看[这里](https://juejin.cn/post/7338797433899221043)
 
 ## 前置条件
 
