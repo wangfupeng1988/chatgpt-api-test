@@ -9,7 +9,7 @@ ChatGPT API 文档 https://platform.openai.com/docs/overview
 ## 背景
 
 - 网上很多资料过时了，不再符合 OpenAI 的开发文档
-- 我要做一个 Node 全栈 AIGC 知识库项目 [划水 AI](https://huashuiai.com/) （仿 notion），项目介绍看[这里](https://juejin.cn/post/7338797433899221043)
+- 我要做一个 Node 全栈 AIGC 知识库项目 [划水 AI](https://huashuiai.com/) （仿 notion），需要用到 ChatGPT API
 
 ## 前置条件
 
@@ -18,24 +18,25 @@ ChatGPT API 文档 https://platform.openai.com/docs/overview
 
 ## 下载和运行
 
-保证你的机器上有 git 和 nodejs ，然后在控制台全局安装 `npm i ts-node-dev -g`
+保证你的机器上有 git 和 nodejs
 
-git clone 这份代码，在代码根目录创建 `.env` 文件，并写入内容 `OPENAI_API_KEY=xxx` （你的 API key）
+git clone 这份代码
+
+代码根目录，将 `.env.example` 文件重命名为 `.env` ，然后修改内容， 写上你自己的 API key
 
 控制台进入代码目录，执行
 
 ```
 npm install
-
-tsnd server.ts
+npm start
 ```
 
 ## 测试
 
 访问该机器 `3001` 端口。PS：云服务器可能需要开通 OS 防火墙端口，以及平台的安全组。
 
-## 参加我的 Node 全栈 AIGC 项目
+## 关于我的 Node 全栈 AIGC 项目
 
-我打算用 Next.js + ChatGPT 开发一个 AIGC 知识库（仿 Notion AI 和协同编辑）[划水 AI](https://huashuiai.com/) 项目（尚未开发），并真实上线运行。
+我将用 Next.js + ChatGPT 开发一个 AIGC 知识库（仿 Notion AI 和协同编辑）[划水 AI](https://huashuiai.com/) 项目（尚未开发，但域名 证书 服务器已经搞定），并真实上线运行。项目介绍看[这里](https://juejin.cn/post/7338797433899221043#heading-4)。
 
-项目介绍在[这里](https://juejin.cn/post/7338797433899221043)。有兴趣围观、学习、参与研发的朋友，可直接加我微信 `fe-wfp` （请备注“github 划水”）。
+如果你也对 Node 全栈 AIGC 感兴趣，可以来围观、学习甚至参与开发，可以私信我。
